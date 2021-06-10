@@ -9,6 +9,10 @@ package com.o0u0o.javaee;
  *
  * String:intern()是一个本地方法，他的作用是如果字符串常量池已经包含一个等于此String对象的字符串，则返回代表
  * 池中这个字符串的String对象的引用；否则，会降此String对象包含字符串添加到常量池中，并且返回此String对象的引用。
+ *
+ * 【考察点】
+ * 1、考察intern() 方法，判断 true / false
+ * 2、是否阅读《深入理解Java虚拟机》周志明
  * @author o0u0o
  * @date 2021/6/10 8:27 下午
  */
@@ -27,6 +31,7 @@ public class StringPoll58Demo {
         System.out.println(str2.intern());
 
         /**
+         *
          * 输出false 因为"java" 已经在常量池中
          * 在初始化java字符串（JDK出娘胎自带的），在加载sun.misc.Version这个类的时候进入常量池
          * 推演步骤 System  -> initializeSystemClass -> sun.misc.Version.init();
